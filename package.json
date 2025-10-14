@@ -1,0 +1,42 @@
+
+{
+  "homepage": "https://codingmanila.github.io/angel-at-18",
+  "name": "debut-invitation",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.1",
+    "@stitches/react": "^1.2.8",
+    "@types/react-copy-to-clipboard": "^5.0.7",
+    "@types/react-image-gallery": "^1.2.4",
+    "antd": "^5.14.2",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18",
+    "react-image-gallery": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5"
+  }
+  
+}

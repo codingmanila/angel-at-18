@@ -1,0 +1,38 @@
+{
+  "date": "November 30, 2025, Sunday, 3:30 PM",
+  "location": "Anabu 1D Aguinaldo Highway Imus Cavite",
+  "gretting": "Eighteen years ago, I began my journey. Each step has been a gift, filled with love, laughter, and invaluable lessons, thanks to my cherished family and friends. \n Now, as I stand on the threshold of adulthood, I am excited and ready to begin this new chapter. \n I would be honored if you could join me to celebrate this special milestone as we look toward the future together.",
+  "celebrant": {
+    "name": "Angel Rhianne",
+    "account_number": "○○은행 ***-***-******",
+    "parents": {
+      "mother": {
+        "name": "Lilibeth Ilagan",
+        "account_number": "○○은행 ***-***-******"
+      },
+      "father": {
+        "name": "Anthony Ilagan",
+        "account_number": "○○은행 ***-***-******"
+      }
+    }
+  },
+  "groom": {
+    "name": "○○○",
+    "account_number": "○○은행 ***-***-******",
+    "parents": {
+      "mother": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      },
+      "father": {
+        "name": "○○○",
+        "account_number": "○○은행 ***-***-******"
+      }
+    }
+  },
+  "kakaotalk": {
+    "api_token": "",
+    "wedding_invitation_url": "",
+    "share_image": ""
+  }
+}
