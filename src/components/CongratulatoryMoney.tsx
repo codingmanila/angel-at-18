@@ -96,11 +96,14 @@ type CongratulatoryMoneyProps = {};
 
 export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
   const sharedPalette = [
-    { name: "Pastel Pink", hex: "#FFD1DC" },
-    { name: "Baby Blue", hex: "#B0CFFF" },
-    { name: "Mint Green", hex: "#B2E3D4" },
-    { name: "Ivory/Off-White", hex: "#FFF7F6" },
+    { name: "Dark Orange", hex: "#C06E3E" },
+    { name: "Warm White", hex: "#F6EEDD" },
+    { name: "Light Pink/Peach", hex: "#F9FCF2" },
+    { name: "Light Lavender", hex: "#D4BFD9" },
+    { name: "Cool Blue/Baby Blue", hex: "#9DD5E4" },
+    { name: "Light Olive Green", hex: "#98B342" },
   ];
+
 
   return (
     <Wrapper>
