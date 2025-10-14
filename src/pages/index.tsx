@@ -65,9 +65,10 @@ export default function Home() {
       </Head>
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
+        <Gallery />
         <Title data={JsonData} />
         <Gretting data={JsonData} />
-        <Gallery />
+        <Gallery2 />
         <Location />
         <CongratulatoryMoney  />
         <Share data={JsonData} />
