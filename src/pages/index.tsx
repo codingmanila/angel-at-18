@@ -6,9 +6,10 @@ import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
 import Script from "next/script";
 
+const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Title = dynamic(() => import("@/components/Title"), { ssr: false });
 const Gretting = dynamic(() => import("@/components/Greeting"), { ssr: false });
-const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
+const Gallery2 = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
 const CongratulatoryMoney = dynamic(
   () => import("@/components/CongratulatoryMoney"),
