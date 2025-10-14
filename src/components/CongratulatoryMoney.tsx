@@ -56,39 +56,48 @@ const LayoutContainer = styled("div", {
   margin: "0 auto",
 
   // On mobile screens, stack the items vertically
-  '@media (max-width: 768px)': {
-    flexDirection: 'column',
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
     gap: "0px", // Remove horizontal gap when stacked vertically
   },
 });
 
 const CenterContent = styled("div", {
-    flex: 2, 
-    textAlign: "center",
-    // Ensure no unwanted top margin on mobile
-    '@media (max-width: 768px)': {
-        marginTop: "0", 
-        paddingTop: "24px", // Add padding for internal spacing from the image above
-        paddingBottom: "24px", // Add padding for internal spacing from the image below
-    },
+  flex: 2,
+  textAlign: "center",
+  // Ensure no unwanted top margin on mobile
+  "@media (max-width: 768px)": {
+    marginTop: "0",
+    paddingTop: "24px", // Add padding for internal spacing from the image above
+    paddingBottom: "24px", // Add padding for internal spacing from the image below
+  },
 });
 
 const AttireImage = styled("img", {
-    width: "100%",
-    maxWidth: "200px", 
-    borderRadius: "8px",
-    objectFit: "cover",
-    height: "auto",
-    flex: 1,
-    // Add vertical margins for mobile view when stacked
-    '@media (max-width: 768px)': {
-        marginTop: "16px", 
-        marginBottom: "0",
-        // The bottom image needs a small bottom margin before the next section of the website begins
-        '&:last-child': {
-            marginBottom: '16px',
-        },
+  width: "100%",
+  maxWidth: "200px",
+  borderRadius: "8px",
+  objectFit: "cover",
+  height: "auto",
+  flex: 1,
+  // Add vertical margins for mobile view when stacked
+  "@media (max-width: 768px)": {
+    marginTop: "16px",
+    marginBottom: "0",
+    // The bottom image needs a small bottom margin before the next section of the website begins
+    "&:last-child": {
+      marginBottom: "16px",
     },
+  },
+});
+
+// Added a styled component for the color descriptions to manage wrapping better
+const ColorDescription = styled("span", {
+    fontSize: '1.1vh',
+    opacity: 0.7,
+    marginRight: '8px',
+    // Prevent text from breaking onto new lines mid-word if possible
+    whiteSpace: 'nowrap', 
 });
 
 
@@ -126,11 +135,12 @@ export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
               ))}
             </SwatchRow>
 
-            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px'}}>
+            {/* Use a div with flex-wrap and gap to manage spacing on small screens */}
+            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px 4px'}}>
                 {sharedPalette.map((color) => (
-                    <span key={color.name} style={{fontSize: '1.1vh', opacity: 0.7, marginRight: '8px'}}>
+                    <ColorDescription key={color.name}>
                         {color.name}
-                    </span>
+                    </ColorDescription>
                 ))}
             </div>
             
