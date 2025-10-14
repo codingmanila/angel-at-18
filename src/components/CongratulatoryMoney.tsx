@@ -107,9 +107,9 @@ export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
   const sharedPalette = [
     { name: "Dark Orange", hex: "#C06E3E" },
     { name: "Warm White", hex: "#F6EEDD" },
-    { name: "Light Pink/Peach", hex: "#F9FCF2" },
+    { name: "Light Pink", hex: "#F9FCF2" },
     { name: "Light Lavender", hex: "#D4BFD9" },
-    { name: "Cool Blue/Baby Blue", hex: "#9DD5E4" },
+    { name: "Cool Blue", hex: "#9DD5E4" },
     { name: "Light Olive Green", hex: "#98B342" },
   ];
 
