@@ -56,7 +56,7 @@ export default function Gretting({ data }: GrettingProps) {
         {data?.celebrant?.parents?.father?.name} &{" "}
         {data?.celebrant?.parents?.mother?.name}{"'s"} youngest daughter <br/>
         {data?.celebrant?.name} Ilagan
-        {" "}
+        <br/>
       </Celebrant>
     </Wrapper>
   );

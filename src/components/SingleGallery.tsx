@@ -63,7 +63,7 @@ export default function SingleGallery() {
         </Divider>
         
         {/* Your Image or Gallery Component goes here */}
-        <Image src="./assets/Gallery_Photo_7.JPG" alt="Gallery Photo" />
+        <Image src="./assets/Gallery_Photo_1.JPG" alt="Gallery Photo" />
 
       </ContentWrapper>
     </Wrapper>

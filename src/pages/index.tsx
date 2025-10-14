@@ -7,12 +7,16 @@ import JsonData from "@/data.json";
 import Script from "next/script";
 
 const SingleGallery = dynamic(() => import("@/components/SingleGallery"), { ssr: false });
-const Title = dynamic(() => import("@/components/Title"), { ssr: false });
+{/* const Title = dynamic(() => import("@/components/Title"), { ssr: false }); */} 
 const Gretting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
-const CongratulatoryMoney = dynamic(
+const DressCode = dynamic(
   () => import("@/components/CongratulatoryMoney"),
+  { ssr: false }
+);
+const RSVP = dynamic(
+  () => import("@/components/RSVP"),
   { ssr: false }
 );
 const Share = dynamic(() => import("@/components/Share"), { ssr: false });
@@ -66,11 +70,12 @@ export default function Home() {
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <SingleGallery />
-     
+        {/* <Title data={JsonData} />*/} 
         <Gretting data={JsonData} />
         <Gallery />
-        <Location />
-        <CongratulatoryMoney  />
+        <RSVP  />
+        <DressCode  />
+        <Location  />
         <Share data={JsonData} />
         <Footer>Copyright © 2025 IT Consultancy</Footer>
       </main>

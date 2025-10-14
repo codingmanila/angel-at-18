@@ -18,16 +18,16 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_1.JPG",
-    thumbnail: "./assets/Gallery_Photo_1.JPG",
+    original: "./assets/Gallery_Photo_2.png",
+    thumbnail: "./assets/Gallery_Photo_2.png",
   },
   {
-    original: "./assets/Gallery_Photo_2.JPG",
-    thumbnail: "./assets/Gallery_Photo_2.JPG",
+    original: "./assets/Gallery_Photo_3.png",
+    thumbnail: "./assets/Gallery_Photo_3.png",
   },
   {
-    original: "./assets/Gallery_Photo_3.JPG",
-    thumbnail: "./assets/Gallery_Photo_3.JPG",
+    original: "./assets/Gallery_Photo_4.png",
+    thumbnail: "./assets/Gallery_Photo_4.png",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Gallery() {
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
-        <Title>The {"'"}Gram</Title>
+        <Title>18 Specials</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

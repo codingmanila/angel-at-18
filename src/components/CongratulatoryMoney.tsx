@@ -32,113 +32,111 @@ const Description = styled("p", {
 });
 
 const ColorSwatch = styled("div", {
-  width: "100%",
+  width: "30px",
   height: "30px",
-  marginBottom: "8px",
-  borderRadius: "4px",
+  borderRadius: "50%",
   border: "1px solid #ddd",
+  margin: "0 4px",
 });
 
-const PaletteContainer = styled("div", {
+const SwatchRow = styled("div", {
   display: "flex",
   justifyContent: "center",
-  gap: "20px",
-  flexWrap: "wrap",
-  maxWidth: "800px",
+  marginBottom: "16px",
+  marginTop: "16px",
+});
+
+// Layout container using flexbox for responsiveness
+const LayoutContainer = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "20px", // Horizontal gap for desktop
+  maxWidth: "1000px",
   margin: "0 auto",
+
+  // On mobile screens, stack the items vertically
+  '@media (max-width: 768px)': {
+    flexDirection: 'column',
+    gap: "0px", // Remove horizontal gap when stacked vertically
+  },
 });
 
-const PaletteSection = styled("div", {
-  flex: 1,
-  minWidth: "200px",
-  textAlign: "center",
+const CenterContent = styled("div", {
+    flex: 2, 
+    textAlign: "center",
+    // Ensure no unwanted top margin on mobile
+    '@media (max-width: 768px)': {
+        marginTop: "0", 
+        paddingTop: "24px", // Add padding for internal spacing from the image above
+        paddingBottom: "24px", // Add padding for internal spacing from the image below
+    },
 });
 
-const SectionTitle = styled("p", {
-  fontSize: "1.5vh",
-  fontWeight: "bold",
-  opacity: 0.85,
-  marginBottom: 16,
-  marginTop: 0,
-});
-
-// New styled component for the reference images
-const ReferenceImage = styled("img", {
-    width: "100%", // Fit within the column
-    marginTop: "24px", // Space above the image
-    borderRadius: "8px", // Optional: subtle rounded corners
-    boxShadow: "0 4px 6px rgba(0,0,0,0.1)", // Optional: subtle shadow
-    maxWidth: "300px", // Ensure image is not too large on wide screens
+const AttireImage = styled("img", {
+    width: "100%",
+    maxWidth: "200px", 
+    borderRadius: "8px",
+    objectFit: "cover",
+    height: "auto",
+    flex: 1,
+    // Add vertical margins for mobile view when stacked
+    '@media (max-width: 768px)': {
+        marginTop: "16px", 
+        marginBottom: "0",
+        // The bottom image needs a small bottom margin before the next section of the website begins
+        '&:last-child': {
+            marginBottom: '16px',
+        },
+    },
 });
 
 
 type CongratulatoryMoneyProps = {};
 
 export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
-  // Removed warmPeachOrange to balance the palettes
-  const blushPink = ["#F3D1C8", "#FE828C", "#E6A9EC"];
-  const sageGreen = ["#B2AC88", "#8A9A5B", "#9CAF88"];
-  const lightBlue = ["#ADD8E6", "#B0E0E6"];
-  const navyBlue = ["#000080", "#224870"];
+  const sharedPalette = [
+    { name: "Pastel Pink", hex: "#FFD1DC" },
+    { name: "Baby Blue", hex: "#B0CFFF" },
+    { name: "Mint Green", hex: "#B2E3D4" },
+    { name: "Ivory/Off-White", hex: "#FFF7F6" },
+  ];
 
   return (
     <Wrapper>
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>Dress Code</Title>
       </Divider>
-      <Content>View recommended color palettes and attire references.</Content>
+      <Content>View our suggested shared color palette and attire references.</Content>
 
-      <PaletteContainer>
-        {/* Male Guest Palette Column */}
-        <PaletteSection>
-          <SectionTitle>Male Guests</SectionTitle>
-          
-          <div>
-            <b>Sage Green Palette</b>
-            <Description>Subtle and natural tones.</Description>
-            {sageGreen.map((color) => (
-              <ColorSwatch key={color} css={{ background: color }} />
-            ))}
-          </div>
-          <div style={{ marginTop: 24 }}>
-            <b>Navy Blue Palette</b>
-            <Description>Classic and formal tones.</Description>
-            {navyBlue.map((color) => (
-              <ColorSwatch key={color} css={{ background: color }} />
-            ))}
-          </div>
-          
-          {/* Male Guest Reference Image */}
-          <ReferenceImage src="./assets/Gallery_Photo_8.JPG" alt="Male attire reference" />
+      <LayoutContainer>
+        
+        {/* LEFT/TOP: Male Guest Image */}
+        <AttireImage src="./assets/Gallery_Photo_8.png" alt="Male attire reference" />
 
-        </PaletteSection>
+        {/* CENTER: Shared Palette Content */}
+        <CenterContent>
+            <h3>Recommended Colors</h3>
+            <SwatchRow>
+              {sharedPalette.map((color) => (
+                <ColorSwatch key={color.hex} css={{ background: color.hex }} title={color.name} />
+              ))}
+            </SwatchRow>
 
-        {/* Female Guest Palette Column */}
-        <PaletteSection>
-          <SectionTitle>Female Guests</SectionTitle>
+            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px'}}>
+                {sharedPalette.map((color) => (
+                    <span key={color.name} style={{fontSize: '1.1vh', opacity: 0.7, marginRight: '8px'}}>
+                        {color.name}
+                    </span>
+                ))}
+            </div>
+            
+        </CenterContent>
 
-          {/* Removed Warm Peach/Orange Palette */}
-
-          <div>
-            <b>Blush Pink Palette</b>
-            <Description>Soft and elegant tones.</Description>
-            {blushPink.map((color) => (
-              <ColorSwatch key={color} css={{ background: color }} />
-            ))}
-          </div>
-          <div style={{ marginTop: 24 }}>
-            <b>Light Blue Palette</b>
-            <Description>Calm and inviting tones.</Description>
-            {lightBlue.map((color) => (
-              <ColorSwatch key={color} css={{ background: color }} />
-            ))}
-          </div>
-
-          {/* Female Guest Reference Image */}
-          <ReferenceImage src="./assets/Gallery_Photo_9.JPG" alt="Female attire reference" />
-
-        </PaletteSection>
-      </PaletteContainer>
+        {/* RIGHT/BOTTOM: Female Guest Image */}
+        <AttireImage src="./assets/Gallery_Photo_9.png" alt="Female attire reference" />
+        
+      </LayoutContainer>
     </Wrapper>
   );
 }
