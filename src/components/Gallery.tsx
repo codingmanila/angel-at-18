@@ -29,42 +29,6 @@ const images = [
     original: "./assets/Gallery_Photo_3.JPG",
     thumbnail: "./assets/Gallery_Photo_3.JPG",
   },
-  {
-    original: "./assets/Gallery_Photo_4.JPG",
-    thumbnail: "./assets/Gallery_Photo_4.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_5.JPG",
-    thumbnail: "./assets/Gallery_Photo_5.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_6.JPG",
-    thumbnail: "./assets/Gallery_Photo_6.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_7.JPG",
-    thumbnail: "./assets/Gallery_Photo_7.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_8.JPG",
-    thumbnail: "./assets/Gallery_Photo_8.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_9.JPG",
-    thumbnail: "./assets/Gallery_Photo_9.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_10.JPG",
-    thumbnail: "./assets/Gallery_Photo_10.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_11.JPG",
-    thumbnail: "./assets/Gallery_Photo_11.JPG",
-  },
-  {
-    original: "./assets/Gallery_Photo_12.JPG",
-    thumbnail: "./assets/Gallery_Photo_12.JPG",
-  },
 ];
 
 export default function Gallery() {
