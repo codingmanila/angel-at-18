@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
 import JsonData from "@/data.json";
 import Script from "next/script";
+import EnvelopeSplash from "@/components/EnvelopeSplash";
 
 const SingleGallery = dynamic(() => import("@/components/SingleGallery"), { ssr: false });
 {/* const Title = dynamic(() => import("@/components/Title"), { ssr: false }); */} 
@@ -43,6 +44,13 @@ const Footer = styled("footer", {
 });
 
 export default function Home() {
+  // 2. Add state to control the visibility of the splash screen
+  const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
+
+  // Function to be called when the envelope is clicked and finished its animation
+  const handleEnvelopeOpen = () => {
+    setIsEnvelopeOpen(true);
+  };
   return (
     <>
       <Head>
@@ -67,6 +75,12 @@ export default function Home() {
         <meta name="theme-color" content="#BCAAA4" />
         <title>Angel Rhianne 18th birthday</title>
       </Head>
+      {/* 3. Render the Splash Screen if the envelope is not open */}
+      {!isEnvelopeOpen && (
+        <EnvelopeSplash onOpen={handleEnvelopeOpen} />
+      )}
+
+      {/* 4. Render the main content (inside the <main> tag) */}
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <SingleGallery />
