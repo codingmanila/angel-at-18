@@ -13,7 +13,9 @@ const SplashContainer = styled('div', {
   left: 0,
   width: '100vw',
   height: '100vh',
-  backgroundColor: '#BCAAA4',
+  // --- EDITED: Changed solid hex to rgba to apply slight opacity (0.9) ---
+  backgroundColor: 'rgba(188, 170, 164, 0.9)', 
+  // -----------------------------------------------------------------------
   zIndex: 9999,
   display: 'flex',
   alignItems: 'center',
