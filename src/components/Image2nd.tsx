@@ -48,7 +48,7 @@ const Image = styled("img", {
   display: "block",
 });
 
-export default function Image2nd() {
+export default function Image3rd() {
   return (
     <Wrapper>
       {/* Video Background Component */}

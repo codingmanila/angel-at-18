@@ -11,7 +11,7 @@ body {
 }
 
 /* Double the class name to increase specificity and override the `*` selector */
-.italianno-regular.italianno-regular {
+.italianno-regular {
   font-family: "Italianno", cursive;
   font-weight: 400;
   font-style: normal;
