@@ -66,7 +66,7 @@ export default function MainImage() {
         <Image src="./assets/Gallery_Photo.JPG" alt="Gallery Photo" />
         <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         </Divider>
-        <Image src="./assets/Gallery_Photo_1A.JPG" alt="Gallery Photo" />
+        <Image src="./assets/Gallery_PhotoA.jpg" alt="Gallery Photo" />
       </ContentWrapper>
     </Wrapper>
   );

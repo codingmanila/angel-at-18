@@ -62,7 +62,7 @@ export default function Image6th() {
         </Divider>
         
         {/* Your Image or Gallery Component goes here */}
-        <Image src="./assets/Gallery_Photo_A6.JPG" alt="Gallery Photo" />
+        <Image src="./assets/Gallery_Photo_B6.JPG" alt="Gallery Photo" />
 
       </ContentWrapper>
     </Wrapper>

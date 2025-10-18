@@ -148,7 +148,7 @@ const Image = styled("img", {
 });
 
 export default function Image2nd() {
-  const targetDate = "November 30, 2025 23:59:59";
+  const targetDate = "November 30, 2025 15:29:59";
 
   return (
     <Wrapper >
