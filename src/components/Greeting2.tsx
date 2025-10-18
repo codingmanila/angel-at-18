@@ -53,7 +53,7 @@ export default function MainImage() {
     <Wrapper>
  
       <ContentWrapper>
-        <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+        <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
           <Title>Cheers to 18 years</Title>
         </Divider>
         

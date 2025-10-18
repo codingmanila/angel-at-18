@@ -64,7 +64,7 @@ export default function MainImage() {
         
         {/* Your Image or Gallery Component goes here */}
         <Image src="./assets/Gallery_PhotoA.jpg" alt="Gallery Photo" />
-        <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+        <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
         </Divider>
         <Image src="./assets/Gallery_Photo_1A.JPG" alt="Gallery Photo" />
       </ContentWrapper>
