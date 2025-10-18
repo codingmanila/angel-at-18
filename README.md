@@ -1,1 +1,1 @@
-# Wedding Invitation React.js Template
+# Debut Invitation React.js Template

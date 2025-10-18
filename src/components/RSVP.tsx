@@ -73,7 +73,7 @@ type RSVPProps = {};
 export default function RSVP({}: RSVPProps) {
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
         <Title>RSVP</Title>
       </Divider>
       <Content>Please confirm your attendance below.</Content>

@@ -39,24 +39,23 @@ type GrettingProps = {
 export default function Gretting({ data }: GrettingProps) {
   return (
     <Wrapper>
-      <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
+      <Divider style={{ marginTop: 0, marginBottom: 16 }} plain>
         <Title>Cheers to 18 years</Title>
       </Divider>
-      <Content>
+      <Content className="italianno-regular"> {/* Apply the class here */}
         {data?.gretting?.split("\n")?.map((value, index) => {
           return (
             <div key={index}>
               {value}
-              <br />
             </div>
           );
         })}
       </Content>
-      <Celebrant>
-        {data?.celebrant?.parents?.father?.name} &{" "}
-        {data?.celebrant?.parents?.mother?.name}{"'s"} youngest daughter <br/>
-        {data?.celebrant?.name} Ilagan
-        <br/>
+      <Celebrant className="italianno-regular"> {/* Apply the class here */}
+        With all my love, {"'"}{data?.celebrant?.name} Ilagan{"'"}<br/>
+        Youngest daughter of {data?.celebrant?.parents?.father?.name} &{" "}
+        {data?.celebrant?.parents?.mother?.name}
+        {" "}<br />{" "}<br />
       </Celebrant>
     </Wrapper>
   );

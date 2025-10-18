@@ -7,13 +7,18 @@ import JsonData from "@/data.json";
 import Script from "next/script";
 import EnvelopeSplash from "@/components/EnvelopeSplash";
 
-const SingleGallery = dynamic(() => import("@/components/SingleGallery"), { ssr: false });
 {/* const Title = dynamic(() => import("@/components/Title"), { ssr: false }); */} 
 const Gretting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
+const MainImage = dynamic(() => import("@/components/MainImage"), { ssr: false });
+const Image2nd = dynamic(() => import("@/components/Image2nd"), { ssr: false });
+const Image3rd = dynamic(() => import("@/components/Image3rd"), { ssr: false });
+const Image4th = dynamic(() => import("@/components/Image4th"), { ssr: false });
+const Image5th = dynamic(() => import("@/components/Image5th"), { ssr: false });
+const Image6th = dynamic(() => import("@/components/Image6th"), { ssr: false });
 const DressCode = dynamic(
-  () => import("@/components/CongratulatoryMoney"),
+  () => import("@/components/Dresscode"),
   { ssr: false }
 );
 const RSVP = dynamic(
@@ -83,13 +88,18 @@ export default function Home() {
       {/* 4. Render the main content (inside the <main> tag) */}
       <main className={`${notoSansKR.className}`}>
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
-        <SingleGallery />
+        <MainImage />
         {/* <Title data={JsonData} />*/} 
         <Gretting data={JsonData} />
+        <Image2nd />
         <Gallery />
+        <Image3rd />
         <RSVP  />
+        <Image4th />
         <DressCode  />
+        <Image5th />
         <Location  />
+        <Image6th />
         <Share data={JsonData} />
         <Footer>Copyright © 2025 IT Consultancy</Footer>
       </main>

@@ -72,7 +72,7 @@ export default function Share({ data }: ShareProps) {
 
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
         <Title>Share the Invite!</Title>
       </Divider>
       <CopyToClipboard text={data?.kakaotalk?.wedding_invitation_url ?? ""}>

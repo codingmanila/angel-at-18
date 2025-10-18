@@ -18,23 +18,23 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_2.png",
-    thumbnail: "./assets/Gallery_Photo_2.png",
+    original: "./assets/Gallery_Photo_2A.jpg",
+    thumbnail: "./assets/Gallery_Photo_2A.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_3.png",
-    thumbnail: "./assets/Gallery_Photo_3.png",
+    original: "./assets/Gallery_Photo_3A.jpg",
+    thumbnail: "./assets/Gallery_Photo_3A.jpg",
   },
   {
-    original: "./assets/Gallery_Photo_4.png",
-    thumbnail: "./assets/Gallery_Photo_4.png",
+    original: "./assets/Gallery_Photo_4A.png",
+    thumbnail: "./assets/Gallery_Photo_4A.png",
   },
 ];
 
 export default function Gallery() {
   return (
     <Wrapper>
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
         <Title>18 Specials</Title>
       </Divider>
       <ImageGallery
