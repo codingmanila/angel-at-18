@@ -12,6 +12,7 @@ const Gretting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
 const MainImage = dynamic(() => import("@/components/MainImage"), { ssr: false });
+const Greeting = dynamic(() => import("@/components/Greeting2"), { ssr: false });
 const Image2nd = dynamic(() => import("@/components/Image2nd"), { ssr: false });
 const Image3rd = dynamic(() => import("@/components/Image3rd"), { ssr: false });
 const Image4th = dynamic(() => import("@/components/Image4th"), { ssr: false });
@@ -90,7 +91,7 @@ export default function Home() {
         <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
         <MainImage />
         {/* <Title data={JsonData} />*/} 
-        <Gretting data={JsonData} />
+        <Greeting />
         <Image2nd />
         <Gallery />
         <Image3rd />
