@@ -107,7 +107,6 @@ export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
   const sharedPalette = [
     { name: "Dark Orange", hex: "#C06E3E" },
     { name: "Warm White", hex: "#F6EEDD" },
-    { name: "Light Pink", hex: "#F9FCF2" },
     { name: "Light Lavender", hex: "#D4BFD9" },
     { name: "Cool Blue", hex: "#9DD5E4" },
     { name: "Light Olive Green", hex: "#98B342" },
@@ -128,7 +127,7 @@ export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
 
         {/* CENTER: Shared Palette Content */}
         <CenterContent>
-            <h3>Recommended Colors</h3>
+            <h4>Recommended Colors - 🙏 Strictly no color pink  🙏</h4>
             <SwatchRow>
               {sharedPalette.map((color) => (
                 <ColorSwatch key={color.hex} css={{ background: color.hex }} title={color.name} />

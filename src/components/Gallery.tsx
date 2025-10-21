@@ -18,12 +18,12 @@ const Title = styled("p", {
 
 const images = [
   {
-    original: "./assets/Gallery_Photo_2A.jpg",
-    thumbnail: "./assets/Gallery_Photo_2A.jpg",
+    original: "./assets/Gallery_Photo_2A.png",
+    thumbnail: "./assets/Gallery_Photo_2A.png",
   },
   {
-    original: "./assets/Gallery_Photo_3A.jpg",
-    thumbnail: "./assets/Gallery_Photo_3A.jpg",
+    original: "./assets/Gallery_Photo_3A.png",
+    thumbnail: "./assets/Gallery_Photo_3A.png",
   },
   {
     original: "./assets/Gallery_Photo_4A.png",
