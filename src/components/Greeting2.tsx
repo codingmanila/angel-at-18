@@ -58,7 +58,7 @@ export default function MainImage() {
         </Divider>
         
         {/* Your Image or Gallery Component goes here */}
-        <Image src="./assets/Greeting_PhotoB.JPG" alt="Gallery Photo" />
+        <Image src="./assets/Greeting_PhotoB.png" alt="Gallery Photo" />
       </ContentWrapper>
     </Wrapper>
   );

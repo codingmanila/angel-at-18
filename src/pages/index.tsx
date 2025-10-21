@@ -63,8 +63,9 @@ export default function Home() {
         <meta name="theme-color" content="#BCAAA4" />
 
         {/* Updated link preview meta tags */}
-        <title>✨Angel Rhianne's 18th Bday ✨</title>
-        <meta property="og:title" content="✨Angel Rhianne's 18th Bday ✨" />
+        {/* FIX: Escaped apostrophe ' with &apos; to resolve ESLint error */}
+        <title>✨Angel Rhianne&apos;s 18th Bday ✨</title>
+        <meta property="og:title" content="✨Angel Rhianne&apos;s 18th Bday ✨" />
         <meta property="og:type" content="website" />
         
         {/* Set the image for the link preview. Assumes image is in /public */}
@@ -73,8 +74,8 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Angel Rhianne's 18th Birthday invitation" />
 
-        <meta name="Description" content="You're invited to Angel Rhianne's 18th birthday celebration!" />
-        <meta property="og:description" content="You're invited to Angel Rhianne's 18th birthday celebration!" />
+        <meta name="Description" content="You're invited to Angel Rhianne&apos;s 18th birthday celebration!" />
+        <meta property="og:description" content="You're invited to Angel Rhianne&apos;s 18th birthday celebration!" />
       </Head>
 
       {!isEnvelopeOpen && (
