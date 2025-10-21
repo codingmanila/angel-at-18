@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Noto_Sans_KR } from "next/font/google";
 import dynamic from "next/dynamic";
 import { styled } from "@stitches/react";
@@ -7,7 +7,6 @@ import JsonData from "@/data.json";
 import Script from "next/script";
 import EnvelopeSplash from "@/components/EnvelopeSplash";
 
-{/* const Title = dynamic(() => import("@/components/Title"), { ssr: false }); */} 
 const Gretting = dynamic(() => import("@/components/Greeting"), { ssr: false });
 const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
 const Location = dynamic(() => import("@/components/Location"), { ssr: false });
@@ -50,56 +49,50 @@ const Footer = styled("footer", {
 });
 
 export default function Home() {
-  // 2. Add state to control the visibility of the splash screen
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
 
-  // Function to be called when the envelope is clicked and finished its animation
   const handleEnvelopeOpen = () => {
     setIsEnvelopeOpen(true);
   };
+
   return (
     <>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:type" content="website" />
-        <meta content="Angel Rhianne 18th birthday" name="Title" />
-        <meta
-          content=""
-          name="Description"
-        />
-        <meta content="" name="Keyword" />
-        <meta property="og:title" content="Angel Rhianne 18th birthday" />
-        <meta
-          property="og:description"
-          content=""
-        />
-        <meta
-          property="og:url"
-          content=""
-        />
         <meta name="theme-color" content="#BCAAA4" />
-        <title>Angel Rhianne 18th birthday</title>
+
+        {/* Updated link preview meta tags */}
+        <title>✨Angel Rhianne's 18th Bday ✨</title>
+        <meta property="og:title" content="✨Angel Rhianne's 18th Bday ✨" />
+        <meta property="og:type" content="website" />
+        
+        {/* Set the image for the link preview. Assumes image is in /public */}
+        <meta property="og:image" content="/Gallery_Photo_A5a.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Angel Rhianne's 18th Birthday invitation" />
+
+        <meta name="Description" content="You're invited to Angel Rhianne's 18th birthday celebration!" />
+        <meta property="og:description" content="You're invited to Angel Rhianne's 18th birthday celebration!" />
       </Head>
-      {/* 3. Render the Splash Screen if the envelope is not open */}
+
       {!isEnvelopeOpen && (
         <EnvelopeSplash onOpen={handleEnvelopeOpen} />
       )}
 
-      {/* 4. Render the main content (inside the <main> tag) */}
       <main className={`${notoSansKR.className}`}>
-        <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
+        <Script src="https://developers.kakao.com/sdk/js/kakao.min.js" strategy="afterInteractive" />
         <MainImage />
-        {/* <Title data={JsonData} />*/} 
         <Greeting />
         <Image2nd />
         <Gallery />
         <Image3rd />
-        <RSVP  />
+        <RSVP />
         <Image4th />
-        <DressCode  />
+        <DressCode />
         <Image5th />
-        <Location  />
+        <Location />
         <Image6th />
         <Share data={JsonData} />
         <Footer>Copyright © 2025 IT Consultancy</Footer>
