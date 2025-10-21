@@ -127,7 +127,8 @@ export default function CongratulatoryMoney({}: CongratulatoryMoneyProps) {
 
         {/* CENTER: Shared Palette Content */}
         <CenterContent>
-            <h4>Recommended Colors - 🙏 Strictly no color pink  🙏</h4>
+            <h4>Recommended Colors</h4>
+            <h4>🙏 Strictly no color pink  🙏</h4>
             <SwatchRow>
               {sharedPalette.map((color) => (
                 <ColorSwatch key={color.hex} css={{ background: color.hex }} title={color.name} />
